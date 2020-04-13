@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="7" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="134563" started-at="2020-04-12T07:17:59Z" finished-at="2020-04-12T07:20:14Z">
+  <suite name="Default suite" duration-ms="172286" started-at="2020-04-13T14:56:24Z" finished-at="2020-04-13T14:59:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="134563" started-at="2020-04-12T07:17:59Z" finished-at="2020-04-12T07:20:14Z">
+    <test name="Default test" duration-ms="172286" started-at="2020-04-13T14:56:24Z" finished-at="2020-04-13T14:59:17Z">
       <class name="testSuites.LoginTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testSuites.LoginTest@6eebc39e]" name="setup" is-config="true" duration-ms="12996" started-at="2020-04-12T09:17:46Z" finished-at="2020-04-12T09:17:59Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testSuites.LoginTest@6eebc39e]" name="setup" is-config="true" duration-ms="11521" started-at="2020-04-13T16:56:13Z" finished-at="2020-04-13T16:56:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="20490" started-at="2020-04-12T09:18:00Z" data-provider="getExcelData" finished-at="2020-04-12T09:18:20Z">
+        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="19771" started-at="2020-04-13T16:56:25Z" data-provider="getExcelData" finished-at="2020-04-13T16:56:44Z">
           <params>
             <param index="0">
               <value>
@@ -32,7 +32,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidLogin -->
-        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="17046" started-at="2020-04-12T09:18:20Z" data-provider="getExcelData" finished-at="2020-04-12T09:18:37Z">
+        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="18152" started-at="2020-04-13T16:56:44Z" data-provider="getExcelData" finished-at="2020-04-13T16:57:02Z">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidLogin -->
-        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="16375" started-at="2020-04-12T09:18:37Z" data-provider="getExcelData" finished-at="2020-04-12T09:18:54Z">
+        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="18269" started-at="2020-04-13T16:57:02Z" data-provider="getExcelData" finished-at="2020-04-13T16:57:21Z">
           <params>
             <param index="0">
               <value>
@@ -74,7 +74,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidLogin -->
-        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="22313" started-at="2020-04-12T09:18:54Z" data-provider="getExcelData" finished-at="2020-04-12T09:19:16Z">
+        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="16078" started-at="2020-04-13T16:57:21Z" data-provider="getExcelData" finished-at="2020-04-13T16:57:37Z">
           <params>
             <param index="0">
               <value>
@@ -95,7 +95,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidLogin -->
-        <test-method status="FAIL" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="16242" started-at="2020-04-12T09:19:16Z" data-provider="getExcelData" finished-at="2020-04-12T09:19:32Z">
+        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="25132" started-at="2020-04-13T16:57:37Z" data-provider="getExcelData" finished-at="2020-04-13T16:58:02Z">
           <params>
             <param index="0">
               <value>
@@ -109,22 +109,14 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[please enter username]]>
+                <![CDATA[Please enter username]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [please enter username] but found [Please enter username]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [please enter username] but found [Please enter username]at org.testng.Assert.fail(Assert.java:96)at org.testng.Assert.failNotEquals(Assert.java:776)at org.testng.Assert.assertEqualsImpl(Assert.java:137)at org.testng.Assert.assertEquals(Assert.java:118)at org.testng.Assert.assertEquals(Assert.java:453)at org.testng.Assert.assertEquals(Assert.java:463)at testSuites.LoginTest.InvalidLogin(LoginTest.java:40)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidLogin -->
-        <test-method status="FAIL" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="16207" started-at="2020-04-12T09:19:32Z" data-provider="getExcelData" finished-at="2020-04-12T09:19:49Z">
+        <test-method status="PASS" signature="InvalidLogin(java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:testSuites.LoginTest@6eebc39e]" name="InvalidLogin" duration-ms="17519" started-at="2020-04-13T16:58:02Z" data-provider="getExcelData" finished-at="2020-04-13T16:58:19Z">
           <params>
             <param index="0">
               <value>
@@ -138,25 +130,21 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[please enter password]]>
+                <![CDATA[Please enter password]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [please enter password] but found [Please enter password]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [please enter password] but found [Please enter password]at org.testng.Assert.fail(Assert.java:96)at org.testng.Assert.failNotEquals(Assert.java:776)at org.testng.Assert.assertEqualsImpl(Assert.java:137)at org.testng.Assert.assertEquals(Assert.java:118)at org.testng.Assert.assertEquals(Assert.java:453)at org.testng.Assert.assertEquals(Assert.java:463)at testSuites.LoginTest.InvalidLogin(LoginTest.java:40)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidLogin -->
-        <test-method status="PASS" signature="validLogin()[pri:0, instance:testSuites.LoginTest@6eebc39e]" name="validLogin" duration-ms="25357" started-at="2020-04-12T09:19:49Z" finished-at="2020-04-12T09:20:14Z">
+        <test-method status="PASS" signature="validLogin()[pri:2, instance:testSuites.LoginTest@6eebc39e]" name="validLogin" duration-ms="30121" started-at="2020-04-13T16:58:19Z" finished-at="2020-04-13T16:58:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="EmailvalidLogin()[pri:3, instance:testSuites.LoginTest@6eebc39e]" name="EmailvalidLogin" duration-ms="26957" started-at="2020-04-13T16:58:50Z" finished-at="2020-04-13T16:59:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmailvalidLogin -->
       </class> <!-- testSuites.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -31,7 +31,7 @@ public class LoginTest extends BaseTest {
 		
 	}
 	
-	@Test(dataProvider = "getExcelData")
+	@Test(dataProvider = "getExcelData", priority = 1)
 	public void InvalidLogin(String Username, String Password, String ErrorMessage) {
 		loginPage.UsernameFld.sendKeys(Username);
 		loginPage.PasswordField.sendKeys(Password);
@@ -40,9 +40,21 @@ public class LoginTest extends BaseTest {
 		assertEquals(loginPage.ErrorMessageTxt.getText(), ErrorMessage);
 	  }
 	
-	@Test//(dataProvider = "getExcelData")
+	@Test(priority = 2)
 	public void validLogin() {
 		loginPage.UsernameFld.sendKeys("01144798975");
+		loginPage.PasswordField.sendKeys("1234567z");
+		driver.driver.navigate().back();
+		loginPage.LoginBtn.click();
+		assertTrue(loginPage.SettingsIcon.isDisplayed());
+	  }
+	
+	@Test (priority = 3)
+	public void EmailvalidLogin() {
+		loginPage.SettingsIcon.click();
+		loginPage.LogoutBtn.click();
+		loginPage.ConfirmBtn.click();
+		loginPage.UsernameFld.sendKeys("ahmedessamcs@gmail.com");
 		loginPage.PasswordField.sendKeys("1234567z");
 		driver.driver.navigate().back();
 		loginPage.LoginBtn.click();

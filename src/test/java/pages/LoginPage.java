@@ -35,5 +35,11 @@ public class LoginPage {
 	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/tv_error_password")
 	public AndroidElement ErrorMessageTxt;
+	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/logOut")
+	public AndroidElement LogoutBtn;
+	
+	@AndroidFindBy(id="android:id/button1")
+	public AndroidElement ConfirmBtn;
 
 }

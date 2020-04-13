@@ -5,8 +5,10 @@
     <classes>
       <class name="testSuites.LoginTest">
         <methods>
-          <include name="InvalidLogin" invocation-numbers="4 5"/>
+          <include name="validLogin"/>
+          <include name="InvalidLogin" invocation-numbers="0 1 2 3 4 5"/>
           <include name="setup"/>
+          <include name="EmailvalidLogin"/>
         </methods>
       </class> <!-- testSuites.LoginTest -->
     </classes>
