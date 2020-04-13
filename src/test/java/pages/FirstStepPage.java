@@ -77,6 +77,9 @@ public class FirstStepPage {
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/btn_next")
 	public AndroidElement NextBtn;
 	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/ic_change")
+	public AndroidElement ChangeIcon;
+	
 	
 
 }

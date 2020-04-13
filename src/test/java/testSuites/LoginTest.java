@@ -26,7 +26,6 @@ public class LoginTest extends BaseTest {
 	public void setup() throws Throwable
 	{
 		driver = new RealDevice();
-		driver.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		loginPage = new LoginPage(driver.driver);
 		
 	}
