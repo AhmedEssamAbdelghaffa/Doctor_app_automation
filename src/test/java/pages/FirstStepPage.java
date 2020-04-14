@@ -80,6 +80,15 @@ public class FirstStepPage {
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/ic_change")
 	public AndroidElement ChangeIcon;
 	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/pv")
+	public AndroidElement ConfirmationFld;
+	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_title")
+	public AndroidElement TitleFld;
+	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/btn_confirm_user")
+	public AndroidElement ConfirmBtn;
+	
 	
 
 }

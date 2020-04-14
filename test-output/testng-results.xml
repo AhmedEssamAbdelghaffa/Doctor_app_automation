@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="109116" started-at="2020-04-13T23:14:12Z" finished-at="2020-04-13T23:16:01Z">
+  <suite name="Default suite" duration-ms="151070" started-at="2020-04-13T23:50:42Z" finished-at="2020-04-13T23:53:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="109116" started-at="2020-04-13T23:14:12Z" finished-at="2020-04-13T23:16:01Z">
+    <test name="Default test" duration-ms="151070" started-at="2020-04-13T23:50:42Z" finished-at="2020-04-13T23:53:13Z">
       <class name="testSuites.RegisterationTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testSuites.RegisterationTest@5abca1e0]" name="setup" is-config="true" duration-ms="12211" started-at="2020-04-14T01:13:59Z" finished-at="2020-04-14T01:14:12Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testSuites.RegisterationTest@5abca1e0]" name="setup" is-config="true" duration-ms="13886" started-at="2020-04-14T01:50:28Z" finished-at="2020-04-14T01:50:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="ValidFirstStep()[pri:1, instance:testSuites.RegisterationTest@5abca1e0]" name="ValidFirstStep" duration-ms="109095" started-at="2020-04-14T01:14:12Z" finished-at="2020-04-14T01:16:01Z">
+        <test-method status="PASS" signature="ValidFirstStep()[pri:1, instance:testSuites.RegisterationTest@5abca1e0]" name="ValidFirstStep" duration-ms="108640" started-at="2020-04-14T01:50:42Z" finished-at="2020-04-14T01:52:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidFirstStep -->
+        <test-method status="PASS" signature="ValidConfirmationStep()[pri:2, instance:testSuites.RegisterationTest@5abca1e0]" name="ValidConfirmationStep" duration-ms="42400" started-at="2020-04-14T01:52:31Z" finished-at="2020-04-14T01:53:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidConfirmationStep -->
       </class> <!-- testSuites.RegisterationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

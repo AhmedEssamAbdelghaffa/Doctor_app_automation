@@ -4,6 +4,11 @@ package testSuites;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -40,20 +45,56 @@ public class RegisterationTest extends BaseTest {
 		firstStepPage.ArNameFld.sendKeys(".");
 		firstStepPage.PhoneFld.sendKeys(phone);
 		AddPhoto(1);
-		Thread.sleep(1000);
+		Thread.sleep(10000);
 		firstStepPage.EmailFld.sendKeys("ahmed" + phone + "@gmail.com");
 		while(!waitForPresence(driver.driver, 5, firstStepPage.SalesCodeFld)){scrollDown();}
 		firstStepPage.PasswordFld.sendKeys("1234567z");
 		driver.driver.navigate().back();
 		while(!waitForPresence(driver.driver, 5, firstStepPage.NextBtn)){scrollDown();}
-		firstStepPage.SalesCodeFld.sendKeys("AEA-D50-0833");
+		firstStepPage.SalesCodeFld.sendKeys("AEA-D50-7482");
 		AddPhoto(2);
-		Thread.sleep(1000);
+		Thread.sleep(10000);
 		firstStepPage.TermsCheck.click();
 		firstStepPage.NextBtn.click();
-		assertTrue(firstStepPage.ChangeIcon.isDisplayed());
-		
+		assertTrue(firstStepPage.ChangeIcon.isDisplayed());	
 	  }
+	
+	@Test(priority = 2)
+	public void ValidConfirmationStep() throws SQLException{
+		Connection myConn = null;
+		Statement myStmt = null;
+		ResultSet myRs = null;
+		
+		try {
+			
+			myConn = DriverManager.getConnection("jdbc:mysql://46.165.222.177:3306/verification", "root" , "Cv5cLuIxncz7POAs");
+			System.out.println("Database connection successful!\n");
+			myStmt = myConn.createStatement();
+			myRs = myStmt.executeQuery("select *from verification_code order by id DESC LIMIT 1,1;");
+			while (myRs.next()){
+				System.out.println(myRs.getString("code"));
+				firstStepPage.ConfirmationFld.sendKeys(myRs.getString("code"));
+				firstStepPage.ConfirmBtn.click();
+				assertTrue(firstStepPage.TitleFld.isDisplayed());
+			}
+		}
+		catch (Exception exc) {
+			exc.printStackTrace();
+		}
+		finally {
+			if (myRs != null) {
+				myRs.close();
+			}
+			
+			if (myStmt != null) {
+				myStmt.close();
+			}
+			
+			if (myConn != null) {
+				myConn.close();
+			}
+		}
+	}
 	
 	
 	

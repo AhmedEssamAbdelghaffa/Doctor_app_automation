@@ -26,7 +26,7 @@ public class RealDevice {
 		dc.setCapability("appActivity", ".views.activity.SplashScreenActivity");
 		dc.setCapability("noReset",true);
 		driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), dc);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//driver.findElement(By.id("com.splendapps.splendo:id/imgFirstTask")).click();
 		//driver.findElement(By.id("More options")).click();
 	}
