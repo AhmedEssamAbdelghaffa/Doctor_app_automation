@@ -22,6 +22,8 @@ public class BaseTest {
 	public RealDevice driver = null;
 	public LoginPage loginPage = null;
 	public FirstStepPage firstStepPage = null;
+	public SecondStepPage secondStepPage = null;
+	public ThirdStepPage thirdStepPage = null;
 	
 	
 	public void scrollDown() {

@@ -2,6 +2,8 @@ package testSuites;
 
 
 import static org.testng.Assert.assertTrue;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -33,6 +35,8 @@ public class RegisterationTest extends BaseTest {
 	{
 		driver = new RealDevice();
 		firstStepPage = new FirstStepPage(driver.driver);
+		secondStepPage = new SecondStepPage(driver.driver);
+		thirdStepPage = new ThirdStepPage(driver.driver);
 		
 	}
 	
@@ -96,7 +100,7 @@ public class RegisterationTest extends BaseTest {
 		}
 	}
 	
-	
+	//new AndroidDriver<MobileElement>(null).findElementByAndroidUIAutomator("new UiSelector().textContains(\"confirm\")").click();
 	
 	
 	public String CreatephoneNumber(){
