@@ -98,5 +98,8 @@ public class ThirdStepPage {
 	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
 	public AndroidElement ConfirmBtn;
+	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	public AndroidElement XConfirmBtn;
 
 }
