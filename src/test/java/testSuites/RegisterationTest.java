@@ -2,9 +2,6 @@ package testSuites;
 
 
 import static org.testng.Assert.assertTrue;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -37,6 +34,7 @@ public class RegisterationTest extends BaseTest {
 		firstStepPage = new FirstStepPage(driver.driver);
 		secondStepPage = new SecondStepPage(driver.driver);
 		thirdStepPage = new ThirdStepPage(driver.driver);
+		lastStepPage = new LastStepsPage(driver.driver);
 		
 	}
 	
@@ -51,11 +49,10 @@ public class RegisterationTest extends BaseTest {
 		AddPhoto(1);
 		Thread.sleep(10000);
 		firstStepPage.EmailFld.sendKeys("ahmed" + phone + "@gmail.com");
-		while(!waitForPresence(driver.driver, 5, firstStepPage.SalesCodeFld)){scrollDown();}
+		while(!waitForPresence(driver.driver, 5, firstStepPage.PasswordFld)){scrollDown();}
 		firstStepPage.PasswordFld.sendKeys("1234567z");
-		driver.driver.navigate().back();
 		while(!waitForPresence(driver.driver, 5, firstStepPage.NextBtn)){scrollDown();}
-		firstStepPage.SalesCodeFld.sendKeys("AEA-D50-7482");
+		firstStepPage.SalesCodeFld.sendKeys("SSO-D10-1954");
 		AddPhoto(2);
 		Thread.sleep(10000);
 		firstStepPage.TermsCheck.click();
@@ -71,7 +68,7 @@ public class RegisterationTest extends BaseTest {
 		
 		try {
 			
-			myConn = DriverManager.getConnection("jdbc:mysql://46.165.222.177:3306/verification", "root" , "Cv5cLuIxncz7POAs");
+			myConn = DriverManager.getConnection("jdbc:mysql://35.188.181.11:3306/verification", "dgwelldev" , "xb6QpsXV4LwaYFYr");
 			System.out.println("Database connection successful!\n");
 			myStmt = myConn.createStatement();
 			myRs = myStmt.executeQuery("select *from verification_code order by id DESC LIMIT 1,1;");
@@ -98,6 +95,91 @@ public class RegisterationTest extends BaseTest {
 				myConn.close();
 			}
 		}
+	}
+	
+	@Test(priority = 3)
+	public void ValidSecondStep(){
+		secondStepPage.TitleFld.sendKeys("Automation doctor title");
+		secondStepPage.BioFld.sendKeys("Automation doctor bio");
+		secondStepPage.ArTitleFld.sendKeys(".");
+		secondStepPage.ArBioFld.sendKeys(".");
+		scrollDown();
+		scrollDown();
+		secondStepPage.MaleGenderIcon.click();
+		secondStepPage.SpecialistIcon.click();
+		secondStepPage.GraduationFld.click();
+		secondStepPage.YearSelected.click();
+		while(!waitForPresence(driver.driver, 5, secondStepPage.SpecialitiesFld)){scrollDown();}
+		secondStepPage.SpecialitiesFld.sendKeys("de");
+		secondStepPage.SpecialitySelected.click();
+		while(!waitForPresence(driver.driver, 5, secondStepPage.CertificatesIcon)){scrollDown();}
+		secondStepPage.CertificatesIcon.click();
+		secondStepPage.CertificateTitleFld.sendKeys("Automation certificate title");
+		secondStepPage.CertificateArTitleFld.sendKeys(".");
+		secondStepPage.CertificateUniversityFld.sendKeys("Automation certificate university");
+		scrollDown();
+		secondStepPage.CertificateArUniversityFld.sendKeys(".");
+		scrollDown();
+		secondStepPage.CertificateIssuanceDateFld.click();
+		secondStepPage.CertificateDateSelectedFld.click();
+		scrollDown();
+		secondStepPage.CertificateAddBtn.click();
+		secondStepPage.CertificateBackBtn.click();
+		scrollDown();
+		secondStepPage.ConfirmBtn.click();
+		assertTrue(secondStepPage.ClinicNameFld.isDisplayed());
+	}
+	@Test(priority = 4)
+	public void ValidThirdStep(){
+		thirdStepPage.ClinicNameFld.sendKeys("Automation clinic name");
+		thirdStepPage.ClinicPhoneFld.sendKeys("01144798975");
+		thirdStepPage.ClinicLocationFld.click();
+		thirdStepPage.MyLocationIcon.click();
+		thirdStepPage.ConfirmLocationBtn.click();
+		while(!waitForPresence(driver.driver, 5, thirdStepPage.AddressFld)){scrollDown();}
+		thirdStepPage.AddressFld.sendKeys("Automation clinic address");
+		thirdStepPage.CityFld.click();
+		thirdStepPage.CitySelectedFld.click();
+		thirdStepPage.DistrictFld.click();
+		thirdStepPage.DistrictSelectedFld.click();
+		thirdStepPage.FeesFld.sendKeys("300");
+		while(!waitForPresence(driver.driver, 5, thirdStepPage.ArClinicNameFld)){scrollDown();}
+		thirdStepPage.ArClinicNameFld.sendKeys(".");
+		thirdStepPage.ArClinicLocationFld.sendKeys(".");
+		thirdStepPage.SundayFld.click();
+		thirdStepPage.StartTimeFld.click();
+		thirdStepPage.NineClockIcon.click();
+		thirdStepPage.OkBtn.click();
+		thirdStepPage.EndTimeFld.click();
+		thirdStepPage.TwentyTwoClockIcon.click();
+		thirdStepPage.OkBtn.click();
+		thirdStepPage.SlotFld.click();
+		thirdStepPage.NoneSlotTxt.click();
+		thirdStepPage.CloseReservationFld.click();
+		thirdStepPage.NoneSlotTxt.click();
+		scrollDown();
+		thirdStepPage.SaveBtn.click();
+		while(!waitForPresence(driver.driver, 5, thirdStepPage.ConfirmBtn)){scrollDown();}
+		thirdStepPage.ConfirmBtn.click();
+		assertTrue(thirdStepPage.featureTxt.isDisplayed());	
+	}
+	
+	@Test(priority = 5)
+	public void ValidFourthStep(){
+		
+		while(!waitForPresence(driver.driver, 5, lastStepPage.ConfirmBtn)){scrollDown();}
+		lastStepPage.SelectPlanBtn.click();
+		lastStepPage.ConfirmBtn.click();
+		assertTrue(lastStepPage.ThankYouTxt.isDisplayed());
+		
+	}
+	
+	@Test(priority = 6)
+	public void RedirectToProfileStep(){
+		
+		lastStepPage.DoneBtn.click();
+		assertTrue(lastStepPage.DoctorStatusTxt.isDisplayed());
+		
 	}
 	
 	//new AndroidDriver<MobileElement>(null).findElementByAndroidUIAutomator("new UiSelector().textContains(\"confirm\")").click();
