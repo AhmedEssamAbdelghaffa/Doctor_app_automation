@@ -52,7 +52,7 @@ public class SecondStepPage {
 	public AndroidElement SpecialitySelected;
 	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/img_certificates")
-	public AndroidElement CertificatesFld;
+	public AndroidElement CertificatesIcon;
 	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/certificate_title")
 	public AndroidElement CertificateTitleFld;
@@ -71,7 +71,7 @@ public class SecondStepPage {
 	
 	@AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout"
 			+ "/android.widget.ListView/android.widget.TextView[7]")
-	public AndroidElement CertificateDAteSelectedFld;
+	public AndroidElement CertificateDateSelectedFld;
 	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/btn_add")
 	public AndroidElement CertificateAddBtn;
