@@ -24,6 +24,7 @@ public class BaseTest {
 	public FirstStepPage firstStepPage = null;
 	public SecondStepPage secondStepPage = null;
 	public ThirdStepPage thirdStepPage = null;
+	public LastStepsPage lastStepPage = null;
 	
 	
 	public void scrollDown() {
