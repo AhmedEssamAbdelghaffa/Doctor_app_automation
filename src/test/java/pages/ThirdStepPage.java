@@ -19,7 +19,7 @@ public class ThirdStepPage {
 	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
 	public AndroidElement ClinicNameFld;
-	// fix id's ------------------------------------------------------------
+	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_phone_1")
 	public AndroidElement ClinicPhoneFld;
 	
@@ -29,8 +29,8 @@ public class ThirdStepPage {
 	@AndroidFindBy(xpath="//android.widget.ImageView[@content-desc=\"My Location\"]")
 	public AndroidElement MyLocationIcon;
 	
-	/*@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
-	public AndroidElement ConfirmLocationBtn;*/
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/btn_confirm")
+	public AndroidElement ConfirmLocationBtn;
 	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_address")
 	public AndroidElement AddressFld;
@@ -57,47 +57,65 @@ public class ThirdStepPage {
 			+ ".ListView/android.widget.TextView[3]")
 	public AndroidElement DistrictSelectedFld;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_fees")
 	public AndroidElement FeesFld;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic_ar")
 	public AndroidElement ArClinicNameFld;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_address_ar")
 	public AndroidElement ArClinicLocationFld;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout"
+			+ "/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout"
+			+ "/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView"
+			+ "/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]"
+			+ "/android.widget.LinearLayout")
 	public AndroidElement SundayFld;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
-	public AndroidElement StarttimeFld;
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_from")
+	public AndroidElement StartTimeFld;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(xpath="//android.widget.RadialTimePickerView.RadialPickerTouchHelper[@content-desc=\"9\"]")
 	public AndroidElement NineClockIcon;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(id="android:id/button1")
 	public AndroidElement OkBtn;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_to")
+	public AndroidElement EndTimeFld;
+	
+	@AndroidFindBy(xpath="//android.widget.RadialTimePickerView.RadialPickerTouchHelper[@content-desc=\"22\"]")
 	public AndroidElement TwentyTwoClockIcon;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout"
+			+ "/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout"
+			+ "/android.widget.ScrollView/android.view.ViewGroup/android.widget.LinearLayout"
+			+ "/android.widget.LinearLayout[1]/android.widget.FrameLayout/android.widget.Spinner/android.widget.TextView")
 	public AndroidElement SlotFld;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView"
+			+ "/android.widget.TextView[1]")
 	public AndroidElement NoneSlotTxt;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout"
+			+ "/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout"
+			+ "/android.widget.ScrollView/android.view.ViewGroup/android.widget.LinearLayout"
+			+ "/android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.Spinner/android.widget.TextView")
 	public AndroidElement CloseReservationFld;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
-	public AndroidElement NoneCloseTxt;
+	/*@AndroidFindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView"
+			+ "/android.widget.TextView[1]")
+	public AndroidElement NoneCloseTxt;*/
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/btn_save")
 	public AndroidElement SaveBtn;
 	
-	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_name_clinic")
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/btn_confirm")
 	public AndroidElement ConfirmBtn;
+	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_feature")
+	public AndroidElement featureTxt;
 	
 	
 }
