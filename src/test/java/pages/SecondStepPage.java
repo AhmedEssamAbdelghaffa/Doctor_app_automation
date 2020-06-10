@@ -20,7 +20,7 @@ public class SecondStepPage {
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_title")
 	public AndroidElement TitleFld;
 	
-	// hello from the other side helookadokc 
+	// hello from the other side helookadokc kkkkca
 	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/txt_bio1")
 	public AndroidElement BioFld;
