@@ -68,7 +68,7 @@ public class RegisterationTest extends BaseTest {
 		
 		try {
 			
-			myConn = DriverManager.getConnection("jdbc:mysql://35.188.181.11:3306/verification", "dgwelldev" , "xb6QpsXV4LwaYFYr");
+			myConn = DriverManager.getConnection("jdbc:mysql://35.188.181.11:3306/verification", "dgwelltesting" , "xb6QpsXV4LwaYFYr");
 			System.out.println("Database connection successful!\n");
 			myStmt = myConn.createStatement();
 			myRs = myStmt.executeQuery("select *from verification_code order by id DESC LIMIT 1,1;");
