@@ -25,6 +25,12 @@ public class BaseTest {
 	public SecondStepPage secondStepPage = null;
 	public ThirdStepPage thirdStepPage = null;
 	public LastStepsPage lastStepPage = null;
+	public RequestBannerPage banner = null;
+	public MarketingPaymentMethodPage payment = null;
+	public RequestVideoPage video = null;
+	public RequestFacebookCampaignPage facebookCampaign = null;
+	public RequestGoogleSearchCampaignPage googleSearchCampaign = null;
+
 	
 	
 	public void scrollDown() {
