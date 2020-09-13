@@ -31,5 +31,15 @@ public class RequestAppAdsPage extends BasePage {
 	
 	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/btn_next")
 	public AndroidElement ContinueBtn;
+	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/et_title")
+	public AndroidElement TitleFld;
+	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/app_ads_message")
+	public AndroidElement MessageFld;
+	
+	@AndroidFindBy(id="com.dgwell.caresquare.doctor:id/btn_confirm")
+	public AndroidElement ConfirmBtn;
+
 
 }
