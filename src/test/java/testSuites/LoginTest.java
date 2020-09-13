@@ -32,8 +32,8 @@ public class LoginTest extends BaseTest {
 	
 	@Test(dataProvider = "getExcelData", priority = 1)
 	public void InvalidLogin(String Username, String Password, String ErrorMessage) {
-		loginPage.UsernameFld.sendKeys(Username);
-		loginPage.PasswordField.sendKeys(Password);
+		loginPage.UsernameFld.sendKeys("01144798975");
+		loginPage.PasswordField.sendKeys("1234567z");
 		driver.driver.navigate().back();
 		loginPage.LoginBtn.click();
 		assertEquals(loginPage.ErrorMessageTxt.getText(), ErrorMessage);
