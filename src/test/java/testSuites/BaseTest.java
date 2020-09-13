@@ -20,16 +20,32 @@ import io.appium.java_client.touch.offset.PointOption;
 public class BaseTest {
 	
 	public RealDevice driver = null;
+	
 	public LoginPage loginPage = null;
+	
 	public FirstStepPage firstStepPage = null;
+	
 	public SecondStepPage secondStepPage = null;
+	
 	public ThirdStepPage thirdStepPage = null;
+	
 	public LastStepsPage lastStepPage = null;
+	
 	public RequestBannerPage banner = null;
+	
 	public MarketingPaymentMethodPage payment = null;
+	
 	public RequestVideoPage video = null;
+	
 	public RequestFacebookCampaignPage facebookCampaign = null;
+	
 	public RequestGoogleSearchCampaignPage googleSearchCampaign = null;
+	
+	public RequestGoogleAdsCampaignPage googleAdsCampaign = null;
+	
+	public RequestAnnouncementPage Announcement = null;
+	
+	public RequestAppAdsPage AppAds = null;
 
 	
 	
