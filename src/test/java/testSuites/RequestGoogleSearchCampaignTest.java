@@ -24,11 +24,16 @@ public class RequestGoogleSearchCampaignTest extends BaseTest {
 	@Test(priority = 1)
 	public void ValidRequest() {
 		googleSearchCampaign.MarketingIcon.click();
+		googleSearchCampaign.GoogleSearchIcon.click();
+		googleSearchCampaign.GoogleSearchNameFld.sendKeys("Automation Google search name");
+		googleSearchCampaign.GoogleSearchMessageFld.sendKeys("Automation google search message");
+		googleSearchCampaign.GoogleSearchKeywordsFld.sendKeys("automation, google, search, keywords");
+		googleSearchCampaign.RequestBtn.click();
 		payment.QuotaBtn.click();
 		scrollDown();
 		scrollDown();
 		payment.RequestBtn.click();
-		assertTrue(googleSearchCampaign.MarketingIcon.isDisplayed());
+		assertTrue(googleSearchCampaign.BannerDetailsBtn.isDisplayed());
 	  }
 
 }
